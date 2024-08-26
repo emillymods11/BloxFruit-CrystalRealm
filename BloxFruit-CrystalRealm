@@ -2138,7 +2138,7 @@ function Click()
 		CamShake:Stop()
 		CombatFramework.activeController.attacking = false
 		CombatFramework.activeController.timeToNextAttack = 0
-		CombatFramework.activeController.hitboxMagnitude = 180
+		CombatFramework.activeController.hitboxMagnitude = 120
 		game:GetService'VirtualUser':CaptureController()
 		game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
 	end
@@ -6007,7 +6007,13 @@ Tabs.Shop:AddButton({
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
 	end
 })
-
+Tabs.Shop:AddButton({
+	Title = "SanguineArt",
+	Description = "",
+	Callback = function()
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")
+	end
+})
 
 Tabs.Shop:AddParagraph({
 	Title = "Items",
